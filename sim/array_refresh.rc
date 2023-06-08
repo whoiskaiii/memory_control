@@ -1,0 +1,72 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 568 155 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/array_refresh_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 7612084675.000000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 10
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname array_refresh.array_rf_cs
+nalias TRAS		3'b010		NULL
+nalias PRE_TRP		3'b011		NULL
+nalias IDLE		3'b000		NULL
+nalias TRP		3'b100		NULL
+nalias TSADDR		3'b001		NULL
+
+addGroup "u_array_refresh"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_refresh_tb.fsdb"
+addSignal -h 15 /array_refresh_tb/u_array_refresh/clk
+addSignal -h 15 -holdScope rst_n
+aliasname array_refresh.array_rf_cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope array_rf_cs[2:0]
+addSignal -h 15 -holdScope array_rf_start
+addSignal -h 15 -holdScope array_rf_done
+addSignal -h 15 -holdScope array_cs_n
+addSignal -h 15 -holdScope array_raddr[15:0]
+addSignal -h 15 -holdScope timing_cnt[7:0]
+addSignal -h 15 -holdScope tras_cnt[7:0]
+addSignal -h 15 -holdScope rf_row_cnt[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

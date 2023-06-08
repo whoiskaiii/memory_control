@@ -1,0 +1,98 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 872 202 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/array_state_ctrl_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 492375.000000
+cursor 0.000000
+marker 157500.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 1
+; marker line index
+markerPos 29
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname array_state_ctrl.array_state_ctrl_cs
+nalias IDLE		2'b00		NULL
+nalias ARRAY_WR		2'b01		NULL
+nalias ARRAY_RD		2'b10		NULL
+nalias ARRAY_RF		2'b11		NULL
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_state_ctrl_tb.fsdb"
+addSignal -h 15 /array_state_ctrl_tb/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope mc_en
+aliasname array_state_ctrl.array_state_ctrl_cs
+addSignal -h 15 -UNSIGNED -HEX /array_state_ctrl_tb/u_array_state_ctrl/array_state_ctrl_cs[1:0]
+addGroup "internal_frame"
+addSignal -h 15 /array_state_ctrl_tb/axi2array_frame_valid
+addSignal -h 15 -holdScope axi2array_frame_data[88:0]
+addSignal -h 15 -holdScope axi2array_frame_data[21:0]
+addSignal -h 15 -holdScope axi2array_frame_data[85:22]
+addSignal -h 15 -holdScope axi2array_frame_data[86]
+addSignal -h 15 -holdScope axi2array_frame_data[87]
+addSignal -h 15 -holdScope axi2array_frame_data[88]
+addSignal -h 15 -holdScope axi2array_frame_ready
+addGroup "array_write"
+addSignal -h 15 /array_state_ctrl_tb/array_wframe_valid
+addSignal -h 15 -holdScope array_wframe_data[88:0]
+addSignal -h 15 -holdScope array_wframe_ready
+addSignal -h 15 -holdScope array_wr_start
+addSignal -h 15 -holdScope array_wr_done
+addSignal -h 15 /array_state_ctrl_tb/send_wframe/frame_len[7:0]
+addSignal -h 15 /array_state_ctrl_tb/wframe_cnt[31:0]
+addGroup "array_read"
+addSignal -h 15 /array_state_ctrl_tb/array_rframe_valid
+addSignal -h 15 -holdScope array_rframe_data[88:0]
+addSignal -h 15 -holdScope array_rframe_ready
+addSignal -h 15 -holdScope array_rd_start
+addSignal -h 15 -holdScope array_rd_done
+addSignal -h 15 /array_state_ctrl_tb/send_rframe/frame_len[7:0]
+addSignal -h 15 /array_state_ctrl_tb/rframe_cnt[31:0]
+addGroup "array_refresh"
+addSignal -h 15 /array_state_ctrl_tb/u_array_state_ctrl/array_rf_period_sel
+addSignal -h 15 -holdScope array_rf_period_0[24:0]
+addSignal -h 15 -holdScope array_rf_period_1[24:0]
+addSignal -h 15 -holdScope array_rf_period[24:0]
+addSignal -h 15 -holdScope array_rf_cnt[24:0]
+addSignal -h 15 -holdScope array_rf_start
+addSignal -h 15 -holdScope array_rf_done
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

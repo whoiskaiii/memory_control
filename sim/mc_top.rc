@@ -1,0 +1,142 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort -10 20 1914 781 205 57
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / -i 0 "" "/home/ICer/ic_prjs/2_memory_control/sim/mc_top_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 5027275.000000
+cursor 0.000000
+marker 0.000000
+
+; visible top row signal index
+top 18
+; marker line index
+markerPos 76
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname arbiter.arbiter_cs
+nalias IDLE		2'b00		NULL
+nalias WR		2'b01		NULL
+nalias RD		2'b10		NULL
+
+aliasmapname array_state_ctrl.array_state_ctrl_cs
+nalias IDLE		2'b00		NULL
+nalias ARRAY_WR		2'b01		NULL
+nalias ARRAY_RD		2'b10		NULL
+nalias ARRAY_RF		2'b11		NULL
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/mc_top_tb.fsdb"
+addSignal -h 15 /mc_top_tb/u_mc_top/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope mc_en
+addGroup "axi_wr"
+addSignal -h 15 /mc_top_tb/u_mc_top/u_axi_slv/u_axi_slv_wchannel/wframe_eof
+addSignal -h 15 -holdScope wframe_eof_last
+addSignal -h 15 -holdScope axi_s_awvalid
+addSignal -h 15 -holdScope axi_s_awready
+addSignal -h 15 -UNSIGNED -UDEC -holdScope axi_s_awlen[7:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope axi_s_awaddr[24:0]
+addSignal -h 15 -holdScope axi_s_wvalid
+addSignal -h 15 -holdScope axi_s_wready
+addSignal -h 15 -holdScope axi_s_wlast
+addSignal -h 15 -holdScope axi_s_wdata[255:0]
+addSignal -h 15 -holdScope axi2arb_wframe_valid
+addSignal -h 15 -holdScope axi2arb_wframe_ready
+addSignal -h 15 -holdScope axi2arb_wframe_data[96:0]
+addSignal -h 15 /mc_top_tb/cnt_len[31:0]
+addSignal -h 15 -UNSIGNED -UDEC /mc_top_tb/axi_wr/axi_s_awlen_t[7:0]
+addSignal -h 15 /mc_top_tb/u_mc_top/u_axi_slv/u_axi_slv_wchannel/wchannel_fifo_full
+addSignal -h 15 -holdScope wchannel_fifo_rd
+addSignal -h 15 -holdScope axi2arb_wframe_ready
+addSignal -h 15 -holdScope wchannel_fifo_empty
+aliasname arbiter.arbiter_cs
+addSignal -h 15 -UNSIGNED -HEX /mc_top_tb/u_mc_top/u_axi_slv/u_arbiter/arbiter_cs[1:0]
+addSignal -h 15 -holdScope axi2array_frame_ready
+addGroup "axi_rd" -e FALSE
+addSignal -h 15 /mc_top_tb/u_mc_top/u_axi_slv/u_axi_slv_rchannel/rframe_eof
+addSignal -h 15 -holdScope rframe_eof_last
+addSignal -h 15 /mc_top_tb/u_mc_top/u_axi_slv/u_axi_slv_wchannel/wframe_eof
+addSignal -h 15 -holdScope wframe_eof_last
+addSignal -h 15 /mc_top_tb/u_mc_top/u_axi_slv/u_axi_slv_rchannel/axi_s_arvalid
+addSignal -h 15 -holdScope axi_s_arready
+addSignal -h 15 -UNSIGNED -UDEC -holdScope axi_s_arlen[7:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope axi_s_araddr[24:0]
+addSignal -h 15 -holdScope axi_s_rvalid
+addSignal -h 15 -holdScope axi_s_rlast
+addSignal -h 15 -holdScope axi_s_rdata[255:0]
+addSignal -h 15 -holdScope axi2arb_rframe_valid
+addSignal -h 15 -holdScope axi2arb_rframe_ready
+addSignal -h 15 -holdScope axi2arb_rframe_data[96:0]
+addSignal -h 15 -holdScope array_rdata_valid
+addSignal -h 15 -holdScope array_rdata[63:0]
+addSignal -h 15 -holdScope rchannel_cs
+addSignal -h 15 -holdScope arlen_fifo_full
+addSignal -h 15 -holdScope axi2arb_rframe_ready
+addSignal -h 15 -holdScope rframe_eof_last
+addSignal -h 15 -UNSIGNED -UDEC -holdScope arlen_reg[7:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope rframe_cnt[10:0]
+addSignal -h 15 -holdScope axi2arb_rframe_valid
+addSignal -h 15 -holdScope axi2arb_rframe_ready
+addSignal -h 15 -holdScope arlen_fifo_empty
+addSignal -h 15 -holdScope arlen_fifo_rd
+addSignal -h 15 -UNSIGNED -UDEC -holdScope arlen_fifo_dout[7:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope rdata_cnt[10:0]
+addGroup "arbiter"
+aliasname arbiter.arbiter_cs
+addSignal -h 15 -UNSIGNED -HEX /mc_top_tb/u_mc_top/u_axi_slv/u_arbiter/arbiter_cs[1:0]
+addGroup "array_state_ctrl"
+aliasname array_state_ctrl.array_state_ctrl_cs
+addSignal -h 15 -UNSIGNED -HEX /mc_top_tb/u_mc_top/u_array_ctrl/u_array_state_ctrl/array_state_ctrl_cs[1:0]
+addSignal -h 15 -holdScope array_wr_start
+addSignal -h 15 -holdScope array_wr_done
+addSignal -h 15 -holdScope array_rd_start
+addSignal -h 15 -holdScope array_rd_done
+addSignal -h 15 -holdScope array_rf_start
+addSignal -h 15 -holdScope array_rf_done
+addSignal -h 15 /mc_top_tb/u_mc_top/u_array_ctrl/array_cs_n
+addSignal -h 15 -holdScope array_raddr[15:0]
+addSignal -h 15 -holdScope array_caddr_vld_wr
+addSignal -h 15 -holdScope array_caddr_wr[5:0]
+addSignal -h 15 -holdScope array_caddr_vld_rd
+addSignal -h 15 -holdScope array_caddr_rd[5:0]
+addSignal -h 15 -holdScope array_wdata_vld
+addSignal -h 15 -holdScope array_wdata[63:0]
+addSignal -h 15 -holdScope array_rdata_vld
+addSignal -h 15 -holdScope array_rdata[63:0]
+addSignal -h 15 -holdScope sync_array_rdata_vld
+addSignal -h 15 -holdScope sync_array_rdata[63:0]
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

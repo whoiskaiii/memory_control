@@ -1,0 +1,206 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort -1 27 1920 977 191 46
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/array_read_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 244925.000000
+cursor 117500.000000
+marker 100000.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 29
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_read_tb.fsdb"
+userBusMem /array_read_tb/u_array_read/array_rframe_data[85]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[84]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[83]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[82]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[81]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[80]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[79]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[78]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[77]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[76]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[75]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[74]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[73]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[72]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[71]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[70]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[69]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[68]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[67]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[66]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[65]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[64]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[63]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[62]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[61]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[60]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[59]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[58]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[57]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[56]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[55]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[54]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[53]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[52]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[51]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[50]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[49]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[48]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[47]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[46]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[45]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[44]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[43]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[42]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[41]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[40]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[39]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[38]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[37]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[36]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[35]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[34]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[33]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[32]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[31]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[30]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[29]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[28]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[27]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[26]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[25]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[24]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[23]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[22]
+saveRunSig "array_data[63:0]"
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+userBusMem /array_read_tb/u_array_read/array_rframe_data[21]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[20]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[19]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[18]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[17]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[16]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[15]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[14]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[13]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[12]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[11]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[10]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[9]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[8]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[7]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[6]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[5]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[4]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[3]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[2]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[1]
+userBusMem /array_read_tb/u_array_read/array_rframe_data[0]
+saveRunSig "array_addr[21:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_read_tb/u_array_read/array_rframe_eof" "/array_read_tb/u_array_read/array_rframe_data[88]" keep
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_read_tb/u_array_read/array_rframe_sof" "/array_read_tb/u_array_read/array_rframe_data[87]" keep
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_read_tb/u_array_read/array_rframe_rw_flag" "/array_read_tb/u_array_read/array_rframe_data[86]" keep
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname array_read.array_rd_cs
+nalias TRCD_RD		3'b010		NULL
+nalias RD		3'b011		NULL
+nalias PRE_TRP		3'b110		NULL
+nalias TRP		3'b111		NULL
+nalias IDLE		3'b000		NULL
+nalias TSADDR		3'b001		NULL
+nalias RD_LAST		3'b100		NULL
+nalias TRTP		3'b101		NULL
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_read_tb.fsdb"
+addSignal -h 15 /array_read_tb/u_array_read/clk
+addSignal -h 15 -holdScope rst_n
+aliasname array_read.array_rd_cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope array_rd_cs[2:0]
+addGroup "array_rframe"
+addSignal -h 15 /array_read_tb/u_array_read/array_rframe_valid
+addSignal -h 15 /array_read_tb/array_rframe_data[88:0]
+addSignal -h 15 /array_read_tb/u_array_read/array_rframe_eof
+addSignal -h 15 -holdScope array_rframe_sof
+addSignal -h 15 -holdScope array_rframe_rw_flag
+addSignal -h 15 -UNSIGNED -UDEC /array_data[63:0]
+addSignal -h 15 -UNSIGNED -UDEC /array_addr[21:0]
+addSignal -h 15 /array_read_tb/u_array_read/array_rframe_ready
+addSignal -h 15 -holdScope array_rd_start
+addSignal -h 15 -holdScope array_rd_done
+addSignal -h 15 -UNSIGNED -UDEC -holdScope timing_cnt[7:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope tras_cnt[7:0]
+addGroup "array_interface"
+addSignal -h 15 /array_read_tb/u_array_read/array_cs_n
+addSignal -h 15 -holdScope array_raddr[15:0]
+addSignal -h 15 -holdScope array_caddr_vld_rd
+addSignal -h 15 -holdScope array_caddr_rd[5:0]
+addSignal -h 15 -holdScope array_rdata_vld
+addSignal -h 15 -holdScope array_rdata[63:0]
+addGroup "sync_array_rdata"
+addSignal -h 15 /array_read_tb/u_array_read/array_rdata_fifo_empty
+addSignal -h 15 -holdScope array_rdata_fifo_pop
+addSignal -h 15 /array_read_tb/sync_array_rdata_vld
+addSignal -h 15 -holdScope sync_array_rdata[63:0]
+addSignal -h 15 /array_read_tb/u_array_read/array_rdata_fifo_full
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

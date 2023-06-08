@@ -1,0 +1,87 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 392 249 66
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/axi_slv_wchannel_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 617362.500000
+cursor 1435000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+userMarker 115099.861 w_1st_hs ID_GREEN5 long_dashed
+userMarker 85000 aw_1st_hs ID_GREEN5 long_dashed
+
+; set reference marker 
+; refMarker marker_name
+refMarker aw_1st_hs
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 26
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/axi_slv_wchannel_tb.fsdb"
+addSignal -h 15 /axi_slv_wchannel_tb/u_axi_slv_wchannel/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope wchannel_cs
+addGroup "aw_channel"
+addSignal -h 15 /axi_slv_wchannel_tb/u_axi_slv_wchannel/axi_s_awvalid
+addSignal -h 15 -holdScope axi_s_awready
+addSignal -h 15 -holdScope axi_s_awlen[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope axi_s_awaddr[24:0]
+addSignal -h 15 -holdScope awaddr_reg[21:0]
+addSignal -h 15 -holdScope awlen_reg[7:0]
+addGroup "w_channel"
+addSignal -h 15 /axi_slv_wchannel_tb/u_axi_slv_wchannel/axi_s_wvalid
+addSignal -h 15 -holdScope axi_s_wready
+addSignal -h 15 -UNSIGNED -HEX -holdScope axi_s_wdata[255:0]
+addSignal -c ID_CYAN5 -ls solid -lw 1 -h 15 -holdScope axi_s_wlast
+addGroup "axi2arb_wframe"
+addSignal -h 15 /axi_slv_wchannel_tb/u_axi_slv_wchannel/axi2arb_wframe_valid
+addSignal -h 15 -holdScope axi2arb_wframe_ready
+addSignal -h 15 -UNSIGNED -HEX -holdScope axi2arb_wframe_data[96:0]
+addSignal -h 15 -holdScope wchannel_fifo_dout[63:0]
+addSignal -h 15 -holdScope wframe_sof
+addSignal -h 15 -holdScope wframe_eof
+addSignal -h 15 -holdScope wframe_eof_last
+addSignal -h 15 -holdScope awlen_reg[7:0]
+addSignal -h 15 /axi_slv_wchannel_tb/cnt_len[31:0]
+addSignal -h 15 -UNSIGNED -HEX /axi_slv_wchannel_tb/u_axi_slv_wchannel/wframe_cnt[10:0]
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

@@ -1,0 +1,92 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort -10 20 1920 977 206 51
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / -i 0 "" "/home/ICer/ic_prjs/2_memory_control/sim/axi_slv_rchannel_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 1412737.500000
+cursor 614750.000000
+marker 639750.000000
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 31
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByRising
+
+
+aliasmapname axi_slv_rchannel.rchannel_cs
+nalias IDLE		1'b0		NULL
+nalias RD		1'b1		NULL
+
+addGroup "global_and_FSM"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/axi_slv_rchannel_tb.fsdb"
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/clk
+addSignal -h 15 -holdScope rst_n
+aliasname axi_slv_rchannel.rchannel_cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope rchannel_cs
+addGroup "ar_channel"
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/axi_s_arvalid
+addSignal -h 15 -holdScope axi_s_arready
+addSignal -h 15 -holdScope axi_s_arlen[7:0]
+addSignal -h 15 -holdScope arlen_reg[7:0]
+addSignal -h 15 -holdScope arlen_fifo_wr
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope arlen_fifo_rd
+addSignal -h 15 -holdScope arlen_fifo_dout[7:0]
+addSignal -h 15 -holdScope arlen_fifo_empty
+addSignal -h 15 -holdScope arlen_fifo_full
+addSignal -h 15 -holdScope axi_s_araddr[24:0]
+addSignal -h 15 -holdScope araddr_reg[21:0]
+addGroup "rframe"
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/axi2arb_rframe_valid
+addSignal -h 15 -holdScope axi2arb_rframe_ready
+addSignal -h 15 -UNSIGNED -HEX -holdScope axi2arb_rframe_data[96:0]
+addSignal -h 15 -holdScope rframe_sof
+addSignal -h 15 -holdScope rframe_eof
+addSignal -h 15 -holdScope rframe_eof_last
+addSignal -h 15 -holdScope rframe_cnt[10:0]
+addGroup "array_r"
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/array_rdata_valid
+addSignal -h 15 -holdScope array_rdata[63:0]
+addSignal -h 15 -holdScope rchannel_fifo_wr
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/u_sync_fifo_64to256/buf_mem[0:7]
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/axi_s_rdata[255:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope rchannel_fifo_rd
+addSignal -h 15 -holdScope rdata_cnt[10:0]
+addGroup "r_channel"
+addSignal -h 15 /axi_slv_rchannel_tb/u_axi_slv_rchannel/axi_s_rvalid
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope axi_s_rlast
+addSignal -h 15 -holdScope axi_s_rdata[255:0]
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

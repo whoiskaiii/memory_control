@@ -1,0 +1,237 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort -10 20 1920 977 186 46
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/array_write_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 260075.000000
+cursor 42500.000000
+marker 122500.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 16
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_write_tb.fsdb"
+userBusMem /array_write_tb/u_array_write/array_wframe_data[0]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[1]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[2]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[3]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[4]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[5]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[6]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[7]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[8]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[9]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[10]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[11]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[12]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[13]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[14]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[15]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[16]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[17]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[18]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[19]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[20]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[21]
+saveRunSig "array_addr[0:21]"
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+userBusMem /array_write_tb/u_array_write/array_wframe_data[21]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[20]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[19]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[18]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[17]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[16]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[15]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[14]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[13]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[12]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[11]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[10]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[9]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[8]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[7]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[6]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[5]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[4]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[3]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[2]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[1]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[0]
+saveRunSig "array_addr[21:0]"
+
+; Run Time Signal and Member
+; userBusMem member ...
+; saveRunSig name
+userBusMem /array_write_tb/u_array_write/array_wframe_data[85]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[84]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[83]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[82]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[81]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[80]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[79]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[78]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[77]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[76]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[75]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[74]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[73]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[72]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[71]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[70]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[69]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[68]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[67]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[66]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[65]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[64]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[63]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[62]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[61]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[60]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[59]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[58]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[57]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[56]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[55]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[54]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[53]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[52]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[51]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[50]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[49]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[48]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[47]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[46]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[45]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[44]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[43]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[42]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[41]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[40]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[39]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[38]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[37]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[36]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[35]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[34]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[33]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[32]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[31]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[30]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[29]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[28]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[27]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[26]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[25]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[24]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[23]
+userBusMem /array_write_tb/u_array_write/array_wframe_data[22]
+saveRunSig "array_data[63:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_write_tb/u_array_write/array_wframe_rw_flag" "/array_write_tb/u_array_write/array_wframe_data[86]" keep
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_write_tb/u_array_write/array_wframe_sof" "/array_write_tb/u_array_write/array_wframe_data[87]" keep
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/array_write_tb/u_array_write/array_wframe_eof" "/array_write_tb/u_array_write/array_wframe_data[88]" keep
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname array_write.array_wr_ns
+nalias TRCD_WR		3'b010		NULL
+nalias PRE_TRP		3'b110		NULL
+nalias WR		3'b011		NULL
+nalias TRP		3'b111		NULL
+nalias IDLE		3'b000		NULL
+nalias WR_LAST		3'b100		NULL
+nalias TSADDR		3'b001		NULL
+nalias TWR		3'b101		NULL
+
+aliasmapname array_write.array_wr_cs
+nalias TRCD_WR		3'b010		NULL
+nalias PRE_TRP		3'b110		NULL
+nalias WR		3'b011		NULL
+nalias TRP		3'b111		NULL
+nalias IDLE		3'b000		NULL
+nalias WR_LAST		3'b100		NULL
+nalias TSADDR		3'b001		NULL
+nalias TWR		3'b101		NULL
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/array_write_tb.fsdb"
+addSignal -h 15 /array_write_tb/u_array_write/clk
+addSignal -h 15 -holdScope rst_n
+aliasname array_write.array_wr_cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope array_wr_cs[2:0]
+addGroup "wframe"
+addSignal -h 15 /array_write_tb/u_array_write/array_wframe_valid
+addSignal -h 15 -UNSIGNED -HEX -holdScope array_wframe_data[88:0]
+addSignal -h 15 -UNSIGNED -UDEC /array_addr[21:0]
+addSignal -h 15 -UNSIGNED -UDEC /array_data[63:0]
+addSignal -h 15 /array_write_tb/u_array_write/array_wframe_rw_flag
+addSignal -h 15 -holdScope array_wframe_sof
+addSignal -h 15 -holdScope array_wframe_eof
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope array_wframe_ready
+addSignal -h 15 -holdScope array_wr_start
+addSignal -h 15 -holdScope array_wr_done
+addSignal -h 15 -UNSIGNED -HEX -holdScope timing_cnt[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tras_cnt[7:0]
+addGroup "array_interface"
+addSignal -h 15 /array_write_tb/u_array_write/array_cs_n
+addSignal -h 15 -holdScope array_raddr[15:0]
+addSignal -h 15 -holdScope array_caddr_vld_wr
+addSignal -h 15 -holdScope array_caddr_wr[5:0]
+addSignal -h 15 -holdScope array_wdata_vld
+addSignal -h 15 -UNSIGNED -UDEC -holdScope array_wdata[63:0]
+addGroup "G4"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

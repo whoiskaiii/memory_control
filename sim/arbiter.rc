@@ -1,0 +1,85 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 639 257 51
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/2_memory_control/sim/arbiter_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 181869.753311
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 21
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname arbiter.arbiter_cs
+nalias IDLE		2'b00		NULL
+nalias WR		2'b01		NULL
+nalias RD		2'b10		NULL
+
+addGroup "global"
+activeDirFile "" "/home/ICer/ic_prjs/2_memory_control/sim/arbiter_tb.fsdb"
+addSignal -h 15 /arbiter_tb/u_arbiter/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope mc_en
+aliasname arbiter.arbiter_cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope arbiter_cs[1:0]
+addSignal -h 15 -holdScope axi_rw_prio[1:0]
+addSignal -h 15 -holdScope cur_axi_rw_prio
+addGroup "wframe"
+addSignal -h 15 /arbiter_tb/u_arbiter/axi2arb_wframe_valid
+addSignal -h 15 -holdScope axi2arb_wframe_ready
+addSignal -h 15 -holdScope axi2arb_wframe_data[96:0]
+addSignal -h 15 -holdScope wframe_eof
+addGroup "rframe"
+addSignal -h 15 /arbiter_tb/u_arbiter/axi2arb_rframe_valid
+addSignal -h 15 -holdScope axi2arb_rframe_ready
+addSignal -h 15 -holdScope axi2arb_rframe_data[96:0]
+addSignal -h 15 -holdScope rframe_eof
+addSignal -h 15 -holdScope axi2array_frame_valid
+addSignal -h 15 -holdScope axi2array_frame_ready
+addSignal -h 15 -holdScope rframe_eof
+addSignal -h 15 -holdScope frame_cnt[7:0]
+addSignal -h 15 -holdScope len_reg[7:0]
+addGroup "frame"
+addSignal -h 15 /arbiter_tb/u_arbiter/axi2array_frame_valid
+addSignal -h 15 -holdScope axi2array_frame_ready
+addSignal -h 15 -holdScope axi2array_frame_data[88:0]
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
