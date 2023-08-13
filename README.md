@@ -1,3 +1,3 @@
 # Memory Controller
 
-Memory Controller Design backup, including design specification, RTL, testbench, etc.
+Memory Controller design backup, including design specification, RTL, testbench, etc.
