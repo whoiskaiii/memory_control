@@ -1,0 +1,408 @@
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal lint/lint_rtl -top mc_top
+run_goal
+current_goal lint/lint_turbo_rtl -top mc_top
+run_goal
+current_goal lint/lint_functional_rtl -top mc_top
+run_goal
+current_goal lint/lint_abstract -top mc_top
+run_goal
+current_goal lint/lint_rtl -top mc_top
+
+
+
+
+
+
+
+
+gui_select_message -rule STARC05-2.11.3.1 -msg {Combinational and sequential parts of an FSM described in same always block}
+gui_select_message -rule STARC05-2.11.3.1 -msg {Combinational and sequential parts of an FSM described in same always block}
+gui_select_message -rule STARC05-2.11.3.1 -msg {Combinational and sequential parts of an FSM described in same always block}
+gui_select_message -rule STARC05-1.3.1.3 -msg {Asynchronous reset signal 'mc_top.rst_n' (flop: 'mc_top.u_axi_slv.u_axi_slv_rchannel.arlen_fifo_full') used as non-reset/synchronous-reset at instance 'mc_top.u_DW_sync.\DW_sync_width_1_2_0_1_inst/sample_syncl_reg[0] .D' (File Name: './/mc_top/mc_top/SPY_DW_WORK/DW_sync_width_1_2_0_1_gate.v' ,Line no.: '17')}
+gui_select_message -rule W528 -msg {Please refer to 'SignalUsageReport.rpt' for details of violating bits}
+gui_select_message -rule W528 -msg {Variable 'rchannel_fifo_empty' set but not read.[Hierarchy: ':mc_top:u_axi_slv@axi_slv:u_axi_slv_rchannel@axi_slv_rchannel']}
+gui_select_message -rule W528 -msg {Variable 'rchannel_fifo_full' set but not read.[Hierarchy: ':mc_top:u_axi_slv@axi_slv:u_axi_slv_rchannel@axi_slv_rchannel']}
+gui_select_message -rule W528 -msg {Variable 'array_rdata_fifo_full' set but not read.[Hierarchy: ':mc_top:u_array_ctrl@array_ctrl:u_array_read@array_read']}
+gui_select_message -rule W528 -msg {Please refer to 'SignalUsageReport.rpt' for details of violating bits}
+gui_select_message -rule STARC05-1.3.1.3 -msg {Asynchronous reset signal 'mc_top.rst_n' (flop: 'mc_top.u_axi_slv.u_axi_slv_rchannel.arlen_fifo_full') used as non-reset/synchronous-reset at instance 'mc_top.u_DW_sync.\DW_sync_width_1_2_0_1_inst/sample_syncl_reg[0] .D' (File Name: './/mc_top/mc_top/SPY_DW_WORK/DW_sync_width_1_2_0_1_gate.v' ,Line no.: '17')}
+current_goal lint/lint_turbo_rtl -top mc_top
+
+
+current_goal lint/lint_functional_rtl -top mc_top
+
+
+current_goal lint/lint_abstract -top mc_top
+
+
+current_goal lint/lint_turbo_rtl -top mc_top
+
+
+current_goal lint/lint_rtl -top mc_top
+
+
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal lint/lint_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal lint/lint_abstract -top mc_top
+
+
+
+
+
+
+gui_select_message -rule checkSGDC_existence -msg {'mc_top.xxx'[TopPort + Net + HierTerminal] not found on/within module 'mc_top'}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+
+
+
+
+
+
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+
+
+
+
+
+
+current_goal cdc/clock_reset_integrity -top mc_top
+
+
+
+
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+
+
+
+
+gui_select_message -rule Ac_unsync02 -msg {Unsynchronized Crossing: destination flop mc_top.u_DW_sync.\DW_sync_width_2_2_0_1_inst/next_sample_syncm1 [1:0], clocked by mc_top.clk, source flop mc_top.u_mc_apb_cfg.mc_en, clocked by mc_top.apb_pclk. Reason: Sync reset used in multi-flop synchronizer [Total Sources: 2 (Number of source domains: 1)]}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+
+
+
+
+gui_select_message -rule Ac_unsync02 -msg {Unsynchronized Crossing: destination flop mc_top.u_DW_sync.\DW_sync_width_2_2_0_1_inst/next_sample_syncm1 [0], clocked by mc_top.clk, source flop mc_top.u_mc_apb_cfg.mc_en, clocked by mc_top.apb_pclk. Reason: Sync reset used in multi-flop synchronizer [Total Sources: 1 (Number of source domains: 1)]}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+
+
+
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop mc_top.u_DW_sync.\DW_sync_width_1_2_0_1_inst/next_sample_syncm1[0] , clocked by mc_top.clk, source flop mc_top.u_mc_apb_cfg.mc_en, clocked by mc_top.apb_pclk. Reason: Sync reset used in multi-flop synchronizer [Total Sources: 1 (Number of source domains: 1)]}
+gui_open_schematic -is
+gui_expand_schematic {pin {u_DW_sync.\DW_sync_width_1_2_0_1_inst/sample_syncf_reg[0] } Q output}
+gui_expand_schematic {pin u_DW_sync.U1 Z output}
+gui_expand_schematic {pin {u_DW_sync.\DW_sync_width_1_2_0_1_inst/sample_syncl_reg[0] } Q output}
+gui_expand_schematic {pinBus u_DW_sync data_d output 1}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+
+
+link_design -force
+
+
+
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+
+
+
+
+
+
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+
+
+
+
+
+
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+
+
+
+
+
+
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+
+
+
+current_goal cdc/cdc_abstract -top mc_top
+
+
+
+
+
+current_goal Design_Read -top mc_top
+
+
+
+
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+
+
+
+
+
+
+
+
+
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+link_design -force
+
+
+
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+
+
+
+
+
+
+
+
+
+gui_select_message -rule SGDC_quasi_static01 -msg {'mc_top.u_array_ctrl.array_tRC'[TopPort + Net + HierTerminal] not found on/within module 'mc_top'}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+
+
+
+
+
+
+
+
+
+
+
+current_goal lint/lint_rtl -top mc_top
+run_goal
+current_goal lint/lint_turbo_rtl -top mc_top
+run_goal
+current_goal lint/lint_functional_rtl -top mc_top
+run_goal
+current_goal lint/lint_abstract -top mc_top
+run_goal
+current_goal lint/lint_rtl -top mc_top
+
+
+
+
+
+
+
+
+gui_select_message -rule UndrivenInTerm-ML -msg {Detected undriven input terminal mc_top.u_array_ctrl.array_rf_period_sel}
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal lint/lint_rtl -top mc_top
+run_goal
+current_goal lint/lint_turbo_rtl -top mc_top
+run_goal
+current_goal lint/lint_functional_rtl -top mc_top
+run_goal
+current_goal lint/lint_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+current_goal lint/lint_rtl -top mc_top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+current_goal Design_Read -top mc_top
+
+
+link_design -force
+
+
+
+current_goal lint/lint_rtl -top mc_top
+run_goal
+current_goal lint/lint_turbo_rtl -top mc_top
+run_goal
+current_goal lint/lint_functional_rtl -top mc_top
+run_goal
+current_goal lint/lint_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_setup_check -top mc_top
+run_goal
+current_goal cdc/clock_reset_integrity -top mc_top
+run_goal
+current_goal cdc/cdc_verify_struct -top mc_top
+run_goal
+current_goal cdc/cdc_verify -top mc_top
+run_goal
+current_goal cdc/cdc_abstract -top mc_top
+run_goal
+current_goal cdc/cdc_verify_jitter -top mc_top
+run_goal
+current_goal lint/lint_rtl -top mc_top
+
+
+
+
+
+
+
+
+
+
+
+
+
+gui_select_message -rule STARC05-1.3.1.3 -msg {Asynchronous reset signal 'mc_top.rst_n' (flop: 'mc_top.u_axi_slv.u_axi_slv_rchannel.arlen_fifo_full') used as non-reset/synchronous-reset at instance 'mc_top.u_DW_sync.\DW_sync_width_2_2_0_1_inst/sample_syncl_reg[1] .D' (File Name: './/mc_top/mc_top/SPY_DW_WORK/DW_sync_width_2_2_0_1_gate.v' ,Line no.: '24')}
+gui_open_schematic -is
+save_project
+gui_exit
+gui_exit

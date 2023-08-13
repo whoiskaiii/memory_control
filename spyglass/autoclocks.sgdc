@@ -1,0 +1,71 @@
+current_design "mc_top"
+
+clock	-name	"mc_top.clk"			-period 2.5 -edge 0 1.25	-domain AXI_CLK -tag SG_AUTO_TAG_0
+clock -name "mc_top.apb_pclk" -period 20	-edge 0 10		-domain APB_CLK	-tag SG_AUTO_TAG_1
+
+### input and output constrain ----------------------------------
+input  -name "mc_top.rst_n"       -clock "mc_top.clk"
+input  -name "mc_top.apb_prst_n"	-clock "mc_top.apb_pclk"
+
+#axi_slv -----------------------
+#axi_s_aw signals.
+input   -name "mc_top.axi_s_awvalid"	-clock "mc_top.clk"
+output	-name	"mc_top.axi_s_awready"	-clock "mc_top.clk"
+input   -name "mc_top.axi_s_awlen"		-clock "mc_top.clk"
+input   -name "mc_top.axi_s_awaddr"		-clock "mc_top.clk"
+#axi_s_w signals.
+input		-name	"mc_top.axi_s_wvalid"	-clock "mc_top.clk"
+output	-name	"mc_top.axi_s_wready"	-clock "mc_top.clk"
+input 	-name	"mc_top.axi_s_wlast"	-clock "mc_top.clk"
+input 	-name	"mc_top.axi_s_wdata"	-clock "mc_top.clk"
+#axi_s_ar signals.
+input   -name	"mc_top.axi_s_arvalid"	-clock "mc_top.clk"
+output  -name	"mc_top.axi_s_arready"	-clock "mc_top.clk"
+input   -name	"mc_top.axi_s_arlen"		-clock "mc_top.clk"
+input   -name	"mc_top.axi_s_araddr"		-clock "mc_top.clk"
+#axi_s_r signals.
+output  -name "mc_top.axi_s_rvalid"	-clock "mc_top.clk"
+output  -name "mc_top.axi_s_rlast"	-clock "mc_top.clk"
+output  -name "mc_top.axi_s_rdata"	-clock "mc_top.clk"
+#array_ctrl --------------------
+#array_interface.
+output  -name "mc_top.array_cs_n"					-clock "mc_top.clk"
+output  -name "mc_top.array_raddr"				-clock "mc_top.clk"
+output  -name "mc_top.array_caddr_vld_wr"	-clock "mc_top.clk"
+output  -name "mc_top.array_caddr_wr"			-clock "mc_top.clk"
+output  -name "mc_top.array_caddr_vld_rd"	-clock "mc_top.clk"
+output  -name "mc_top.array_caddr_rd"			-clock "mc_top.clk"
+output  -name "mc_top.array_wdata_vld"		-clock "mc_top.clk"
+output  -name "mc_top.array_wdata"				-clock "mc_top.clk"
+#array_rdata.
+input   -name "mc_top.array_rdata_vld"	-clock "mc_top.clk"
+input   -name "mc_top.array_rdata"			-clock "mc_top.clk"
+#mc_apb_cfg --------------------
+#apb signals.
+input   -name "mc_top.apb_pclk"			-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_prst_n"		-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_psel"			-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_pwrite"		-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_penable"	-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_paddr"		-clock "mc_top.apb_pclk"
+input   -name "mc_top.apb_pwdata"		-clock "mc_top.apb_pclk"
+output  -name "mc_top.apb_pready"		-clock "mc_top.apb_pclk"
+output  -name "mc_top.apb_prdata"		-clock "mc_top.apb_pclk"
+
+### quasi_static ------------------------------------------------
+#arbiter priority.
+quasi_static -name	"mc_top.axi_rw_prio"
+#array_refresh.
+quasi_static -name	"mc_top.array_rf_period_0"
+quasi_static -name	"mc_top.array_rf_period_1"
+#Timing config.
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRCD_WR"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRAS"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tWR"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRP"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRCD_RD"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRTP"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_tRC"
+#level sync
+quasi_static -name	"mc_top.u_mc_apb_cfg.mc_en"
+quasi_static -name	"mc_top.u_mc_apb_cfg.array_rf_period_sel"
